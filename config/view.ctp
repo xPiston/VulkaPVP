@@ -65,6 +65,10 @@
 								<input type="radio" name="navbar" value="navbar"<?php if($config['navbar'] == "navbar") { echo ' checked'; } ?>>
 							 	<img src="http://eywek.fr/i/3314.png" width="450" alt="">
 							</label>
+							<label class="radio">
+								<input type="radio" name="navbar" value="vulkabar"<?php if($config['navbar'] == "vulkabar") { echo ' checked'; } ?>>
+								<p>VulkaBar (Screenshot bientot)</p>
+							</label>
 						</div>
 					</div>
 
