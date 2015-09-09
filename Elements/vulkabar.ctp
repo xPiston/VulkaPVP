@@ -2,26 +2,7 @@
     $this->Configuration = new ConfigurationComponent;
     $this->EyPlugin = new EyPluginComponent;
 ?>
-<!--Animations CSS-->
-<link rel="stylesheet" href="../webroot/css/animate.min.css"/>
-
-<!--Bootstrap-->
-<link rel="stylesheet" href="../webroot/css/bootstrap.css"/>
-
-<!--Owl-Carousel-->
-<link rel="stylesheet" href="../webroot/css/owl-carousel.css"/>
-
-<!--RoyalSlider + Skin-->
-<link rel="stylesheet" href="../webroot/css/royalslider.css"/>
-<link rel="stylesheet" href="../webroot/css/rs-default-inverted.css"/>
-
-<!--Slider revolution settings-->
-<link rel="stylesheet" href="../webroot/css/settings.css"/>
-
-<!--Custom CSS-->
-<link rel="stylesheet" href="../webroot/css/style.css"/>
-
-<header id="header-style-1" class="dark_header">
+<nav id="header-style-1" class="dark_header">
     <div class="container">
         <nav class="navbar yamm navbar-default">
             <div class="navbar-header">
@@ -38,7 +19,34 @@
                     <li class="dropdown yamm-fw<?php if($this->params['controller'] == 'pages') { ?> actived<?php } ?>">
                         <a href="<?= $this->Html->url('/') ?>"><i class="fa fa-home" title="<?= $Lang->get('HOME') ?>"></i></a>
                     </li>
-                    <li class="dropdown yamm-fw">
+                    <?php
+                    if(!empty($nav)) {
+                        $i = 0;
+                        $count = count($nav);
+                        $count2 = $count / 2;
+                        foreach ($nav as $key => $value) { ?>
+                            <?php if(empty($value['Navbar']['submenu'])) { ?>
+                                <li class="dropdown yamm-fw<?php if($this->params['controller'] == $value['Navbar']['name']) { ?> actived<?php } ?>">
+                                    <a href="<?= $value['Navbar']['url'] ?>"><?= $value['Navbar']['name'] ?></a>
+                                </li>
+                            <?php } else { ?>
+                                <li class="dropdown yamm-fw">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><?= $value['Navbar']['name'] ?> <span class="caret"></span></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <?php
+                                        $submenu = json_decode($value['Navbar']['submenu']);
+                                        foreach ($submenu as $k => $v) {
+                                            ?>
+                                            <li><a href="<?= rawurldecode($v) ?>"><?= rawurldecode(str_replace('+', ' ', $k)) ?></a></li>
+                                        <?php } ?>
+                                    </ul>
+                                </li>
+                            <?php } ?>
+                            <?php
+                            $i++;
+                        }
+                    } ?>
+                     <li class="dropdown yamm-fw">
                         <div class="btn-group">
                             <?php if($this->Connect->connect()) { ?>
                                 <a style="padding-top:6px;" href="<?= $this->Html->url(array('controller' => 'profile', 'action' => 'index', 'plugin' => null)) ?>" class="btn btn-primary"><?= $this->Connect->get_pseudo() ?></a>
@@ -83,36 +91,9 @@
                             </ul>
                         </div>
                     </li>
-                    <?php
-                    if(!empty($nav)) {
-                        $i = 0;
-                        $count = count($nav);
-                        $count2 = $count / 2;
-                        foreach ($nav as $key => $value) { ?>
-                            <?php if(empty($value['Navbar']['submenu'])) { ?>
-                                <li class="dropdown yamm-fw<?php if($i < $count2) { echo ' pull-left'; } elseif($i >= $count2) { echo ' pull-right'; } ?><?php if($this->params['controller'] == $value['Navbar']['name']) { ?> actived<?php } ?>">
-                                    <a href="<?= $value['Navbar']['url'] ?>"><?= $value['Navbar']['name'] ?></a>
-                                </li>
-                            <?php } else { ?>
-                                <li class="dropdown yamm-fw<?php if($i < $count2) { echo ' pull-left'; } elseif($i >= $count2) { echo ' pull-right'; } ?>">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><?= $value['Navbar']['name'] ?> <span class="caret"></span></a>
-                                    <ul class="dropdown-menu" role="menu">
-                                        <?php
-                                        $submenu = json_decode($value['Navbar']['submenu']);
-                                        foreach ($submenu as $k => $v) {
-                                            ?>
-                                            <li><a href="<?= rawurldecode($v) ?>"><?= rawurldecode(str_replace('+', ' ', $k)) ?></a></li>
-                                        <?php } ?>
-                                    </ul>
-                                </li>
-                            <?php } ?>
-                            <?php
-                            $i++;
-                        }
-                    } ?>
                 </ul>
             </div>
         </nav>
     </div>
-</header>
+</nav>
 

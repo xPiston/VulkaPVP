@@ -1,6 +1,6 @@
 <?php 
 $this->Connect = new ConnectComponent;
-$theme_config = file_get_contents(ROOT.'/app/View/Themed/Mineweb/config/config.json');
+$theme_config = file_get_contents(ROOT.'/app/View/Themed/Vulkapvp/config/config.json');
 $theme_config = json_decode($theme_config, true);
 ?>
 <!DOCTYPE html>
@@ -16,17 +16,37 @@ $theme_config = json_decode($theme_config, true);
 
     <title><?= $title_for_layout; ?> - <?= $Configuration->get('name') ?></title>
 
+    <?= $this->Html->css('animate.min.css') ?>
     <?= $this->Html->css('bootstrap.css') ?>
-    <?= $this->Html->css('modern-business.css') ?>
-    <?= $this->Html->css('animate.css') ?>
-    <?= $this->Html->css('font-awesome.min.css') ?>
-    <?= $this->Html->css('mineweb') ?>
+    <?= $this->Html->css('owl-carousel.css') ?>
+    <?= $this->Html->css('royalslider.css') ?>
+    <?= $this->Html->css('rs-default-inverted.css') ?>
+    <?= $this->Html->css('settings.css') ?>
+    <?= $this->Html->css('style.css') ?>
 	<?= $this->Html->css('../font-awesome-4.1.0/css/font-awesome.min.css') ?>
 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,900' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Rambla' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
 	<?= $this->Html->script('jquery-1.11.0.js') ?>
     <?= $this->Html->script('easy_paginate.js') ?>
+    <!--Animations CSS-->
+<link rel="stylesheet" href="../webroot/css/animate.min.css"/>
+
+<!--Bootstrap-->
+<link rel="stylesheet" href="../webroot/css/bootstrap.css"/>
+
+<!--Owl-Carousel-->
+<link rel="stylesheet" href="../webroot/css/owl-carousel.css"/>
+
+<!--RoyalSlider + Skin-->
+<link rel="stylesheet" href="../webroot/css/royalslider.css"/>
+<link rel="stylesheet" href="../webroot/css/rs-default-inverted.css"/>
+
+<!--Slider revolution settings-->
+<link rel="stylesheet" href="../webroot/css/settings.css"/>
+
+<!--Custom CSS-->
+<link rel="stylesheet" href="../webroot/css/style.css"/>
 
     <link rel="icon" type="image/png" href="<?= $theme_config['favicon_url'] ?>" />
     <!--[if lt IE 9]>
