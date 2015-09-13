@@ -4,6 +4,7 @@ $this->Connect = new ConnectComponent;
 $theme_config = file_get_contents(ROOT.'/app/View/Themed/Mineweb/config/config.json');
 $theme_config = json_decode($theme_config, true);
 ?>
+<link rel="stylesheet" href="/theme/Vulkapvp/rs-plugin/css/settings.css"/>
 <?php if($theme_config['slider'] == "true") { ?>
 <section class="slider-wrapper">
     <div class="tp-banner-container">
