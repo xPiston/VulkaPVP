@@ -29,24 +29,6 @@ $theme_config = json_decode($theme_config, true);
     <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
 	<?= $this->Html->script('jquery-1.11.0.js') ?>
     <?= $this->Html->script('easy_paginate.js') ?>
-    <!--Animations CSS-->
-<link rel="stylesheet" href="../webroot/css/animate.min.css"/>
-
-<!--Bootstrap-->
-<link rel="stylesheet" href="../webroot/css/bootstrap.css"/>
-
-<!--Owl-Carousel-->
-<link rel="stylesheet" href="../webroot/css/owl-carousel.css"/>
-
-<!--RoyalSlider + Skin-->
-<link rel="stylesheet" href="../webroot/css/royalslider.css"/>
-<link rel="stylesheet" href="../webroot/css/rs-default-inverted.css"/>
-
-<!--Slider revolution settings-->
-<link rel="stylesheet" href="../webroot/css/settings.css"/>
-
-<!--Custom CSS-->
-<link rel="stylesheet" href="../webroot/css/style.css"/>
 
     <link rel="icon" type="image/png" href="<?= $theme_config['favicon_url'] ?>" />
     <!--[if lt IE 9]>
