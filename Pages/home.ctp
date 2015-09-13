@@ -113,38 +113,23 @@ $theme_config = json_decode($theme_config, true);
         </div>
 
         <?= $Module->loadModules('home') ?>
-        <script>
-        $(document).ready(function() {
-            $('.carousel').carousel({
-                interval: 5000 //changer la vitesse
-            })
-        });
-        </script>
-        <script type="text/javascript">
-        $(document).ready(function() {    
-        //Events that reset and restart the timer animation when the slides change
-        $("#myCarousel").on("slide.bs.carousel", function(event) {
-            //The animate class gets removed so that it jumps straight back to 0%
-            $(".transition-timer-carousel-progress-bar", this)
-                .removeClass("animate").css("width", "0%");
-        }).on("slid.bs.carousel", function(event) {
-            //The slide transition finished, so re-add the animate class so that
-            //the timer bar takes time to fill up
-            $(".transition-timer-carousel-progress-bar", this)
-                .addClass("animate").css("width", "100%");
-        });
-        
-        //Kick off the initial slide animation when the document is ready
-        $(".transition-timer-carousel-progress-bar", "#myCarousel")
-            .css("width", "100%");
-        });
-
-
-        jQuery(function($){
-            
-            $('ul#items').easyPaginate({
-                step:3
+<!-- SLIDER REVOLUTION 4.x SCRIPTS  -->
+<script type="text/javascript" src="../webroot/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
+<script type="text/javascript" src="../webroot/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+<?= $this->Html->script('jquery.themepunch.plugins.min.js') ?>
+<?= $this->Html->script('jquery.themepunch.revolution.min.js') ?>
+<script type="text/javascript">
+    var revapi;
+    jQuery(document).ready(function() {
+        revapi = jQuery('.tp-banner').revolution(
+            {
+                delay:9000,
+                startwidth:1170,
+                startheight:500,
+                hideThumbs:10,
+                fullWidth:"on",
+                forceFullWidth:"on"
             });
-            
-        });
-        </script>
+    });	//ready
+</script>
+
