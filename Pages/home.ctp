@@ -14,7 +14,7 @@ $theme_config = json_decode($theme_config, true);
                     <?php $i = 0; foreach ($search_slider as $k => $v) { ?>
                 <li data-transition="fade" data-slotamount="7" data-masterspeed="1500" >
                     <img src="<?= $v['Slider']['url_img'] ?>"  alt="slidebg1"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
-                    <div class="tp-caption <?= $v['Slider']['special_css'] ?> skewfromrightshort fadeout"
+                    <div class="tp-caption <?= $v['Slider']['css_special'] ?> skewfromrightshort fadeout"
                          data-x="85"
                          data-y="224"
                          data-speed="500"
