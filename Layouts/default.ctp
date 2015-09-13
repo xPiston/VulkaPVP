@@ -121,7 +121,7 @@ $theme_config = json_decode($theme_config, true);
 $('html').height($(document).height());
 $('body').height($(document).height());
     </script>
-     
+
 
     <?= $this->Html->script('jquery-1.11.0.js') ?>
     <?= $this->Html->script('bootstrap.js') ?>
