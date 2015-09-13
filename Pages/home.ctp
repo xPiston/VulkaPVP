@@ -19,8 +19,8 @@ $theme_config = json_decode($theme_config, true);
                          data-y="224"
                          data-speed="500"
                          data-start="1200"
-                         data-easing="Power4.easeOut"><h2><?= before_display($v['Slider']['title']) ?></h2>
-                        <p><?= before_display($v['Slider']['subtitle']) ?></p>
+                         data-easing="Power4.easeOut"><?= before_display($v['Slider']['title']) ?><br>
+                        <?= before_display($v['Slider']['subtitle']) ?>
                     </div>
                 </li>
                         <?php $i++; } ?>

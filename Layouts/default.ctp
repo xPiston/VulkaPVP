@@ -21,7 +21,6 @@ $theme_config = json_decode($theme_config, true);
     <?= $this->Html->css('owl-carousel.css') ?>
     <?= $this->Html->css('royalslider.css') ?>
     <?= $this->Html->css('rs-default-inverted.css') ?>
-    <?= $this->Html->css('settings.css') ?>
     <?= $this->Html->css('style.css') ?>
 	<?= $this->Html->css('../font-awesome-4.1.0/css/font-awesome.min.css') ?>
 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,900' rel='stylesheet' type='text/css'>
