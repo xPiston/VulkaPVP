@@ -4,51 +4,60 @@ $this->Connect = new ConnectComponent;
 $theme_config = file_get_contents(ROOT.'/app/View/Themed/Mineweb/config/config.json');
 $theme_config = json_decode($theme_config, true);
 ?>
-    <?php if($theme_config['slider'] == "true") { ?>
-        <header id="myCarousel" class="carousel slide transition-timer-carousel">
-            <div class="carousel-inner">
+<?php if($theme_config['slider'] == "true") { ?>
+<section class="slider-wrapper">
+    <div class="tp-banner-container">
+        <div class="tp-banner" >
+            <ul>
                 <?php if(!empty($search_slider)) { ?>
                     <?php $i = 0; foreach ($search_slider as $k => $v) { ?>
-                    <div class="item<?php if($i == 0) { echo ' active'; } ?>">
-                        <div class="fill" style="background-image:url('<?= $v['Slider']['url_img'] ?>');"></div>
-                        <div class="carousel-caption">
-                            <h2><?= before_display($v['Slider']['title']) ?></h2>
-                            <p><?= before_display($v['Slider']['subtitle']) ?></p>
+                        <div class="item<?php if($i == 0) { echo ' active'; } ?>">
+                            <div class="fill" style="background-image:url('<?= $v['Slider']['url_img'] ?>');"></div>
+                            <div class="carousel-caption">
+                                <h2><?= before_display($v['Slider']['title']) ?></h2>
+                                <p><?= before_display($v['Slider']['subtitle']) ?></p>
+                            </div>
                         </div>
-                    </div>
-                    <?php $i++; } ?>
+                        <?php $i++; } ?>
                 <?php } else { ?>
-                    <div class="item active">
-                        <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=1900x1080');"></div>
-                        <div class="carousel-caption">
-                            <h2>Caption 1</h2>
-                        </div>
+                <?php if(!empty($search_slider)) { ?>
+                    <?php $i = 0; foreach ($search_slider as $k => $v) { ?>
+                <li data-transition="fade" data-slotamount="7" data-masterspeed="1500" >
+                    <img src="<?= $v['Slider']['url_img'] ?>"  alt="slidebg1"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+                    <div class="tp-caption <?= $v['Slider']['special_css'] ?> skewfromrightshort fadeout"
+                         data-x="85"
+                         data-y="224"
+                         data-speed="500"
+                         data-start="1200"
+                         data-easing="Power4.easeOut"><h2><?= before_display($v['Slider']['title']) ?></h2>
+                        <p><?= before_display($v['Slider']['subtitle']) ?></p>
                     </div>
-                    <div class="item">
-                        <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=1900x1080');"></div>
-                        <div class="carousel-caption">
-                            <h2>Caption 2</h2>
-                        </div>
+                </li>
+                        <?php $i++; } ?>
+                <?php } else { ?>
+                <!-- SLIDE  -->
+                <li data-transition="zoomout" data-slotamount="7" data-masterspeed="1000" >
+                    <!-- MAIN IMAGE -->
+                    <img src="http://placehold.it/1920x500?text=Hello+World"  alt="darkblurbg"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+                    <!-- LAYERS -->
+                    <!-- LAYER NR. 1 -->
+                    <div class="tp-caption largegreenbg skewfromrightshort fadeout"
+                         data-x="85"
+                         data-y="224"
+                         data-speed="500"
+                         data-start="1200"
+                         data-easing="Power4.easeOut">Dev' en cours !
                     </div>
-                    <div class="item">
-                        <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=1900x1080');"></div>
-                        <div class="carousel-caption">
-                            <h2>Caption 3</h2>
-                        </div>
-                    </div>
+                    ...
+                </li>
+                ....
                 <?php } ?>
-            </div>
+            </ul>
+        </div>
+    </div>
 
-            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                <span class="icon-prev"></span>
-            </a>
-            <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                <span class="icon-next"></span>
-            </a>
-             <!-- Timer "progress bar" -->
-            <hr class="transition-timer-carousel-progress-bar animate">
-        </header>
-    <?php } ?>
+</section><!-- end slider-wrapper -->
+<?php } ?>
     <div class="mini-navbar mini-navbar-dark hidden-xs">
       <div class="container">
         <div class="col-sm-12">

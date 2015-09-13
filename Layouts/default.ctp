@@ -38,6 +38,7 @@ $theme_config = json_decode($theme_config, true);
 
 </head>
 
+
 <body><!-- grey.png -->
     <?= $this->element($theme_config['navbar']) ?>
 
