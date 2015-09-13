@@ -11,17 +11,6 @@ $theme_config = json_decode($theme_config, true);
             <ul>
                 <?php if(!empty($search_slider)) { ?>
                     <?php $i = 0; foreach ($search_slider as $k => $v) { ?>
-                        <div class="item<?php if($i == 0) { echo ' active'; } ?>">
-                            <div class="fill" style="background-image:url('<?= $v['Slider']['url_img'] ?>');"></div>
-                            <div class="carousel-caption">
-                                <h2><?= before_display($v['Slider']['title']) ?></h2>
-                                <p><?= before_display($v['Slider']['subtitle']) ?></p>
-                            </div>
-                        </div>
-                        <?php $i++; } ?>
-                <?php } else { ?>
-                <?php if(!empty($search_slider)) { ?>
-                    <?php $i = 0; foreach ($search_slider as $k => $v) { ?>
                 <li data-transition="fade" data-slotamount="7" data-masterspeed="1500" >
                     <img src="<?= $v['Slider']['url_img'] ?>"  alt="slidebg1"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
                     <div class="tp-caption <?= $v['Slider']['special_css'] ?> skewfromrightshort fadeout"
