@@ -114,10 +114,8 @@ $theme_config = json_decode($theme_config, true);
 
         <?= $Module->loadModules('home') ?>
 <!-- SLIDER REVOLUTION 4.x SCRIPTS  -->
-<script type="text/javascript" src="../webroot/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
-<script type="text/javascript" src="../webroot/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
-<?= $this->Html->script('jquery.themepunch.plugins.min.js') ?>
-<?= $this->Html->script('jquery.themepunch.revolution.min.js') ?>
+<script type="text/javascript" src="/theme/Vulkapvp/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
+<script type="text/javascript" src="/theme/Vulkapvp/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
 <script type="text/javascript">
     var revapi;
     jQuery(document).ready(function() {
