@@ -2,25 +2,6 @@
     $this->Configuration = new ConfigurationComponent;
     $this->EyPlugin = new EyPluginComponent;
 ?>
-<!--Animations CSS-->
-<link rel="stylesheet" href="../webroot/css/animate.min.css"/>
-
-<!--Bootstrap-->
-<link rel="stylesheet" href="../webroot/css/bootstrap.css"/>
-
-<!--Owl-Carousel-->
-<link rel="stylesheet" href="../webroot/css/owl-carousel.css"/>
-
-<!--RoyalSlider + Skin-->
-<link rel="stylesheet" href="../webroot/css/royalslider.css"/>
-<link rel="stylesheet" href="../webroot/css/rs-default-inverted.css"/>
-
-<!--Slider revolution settings-->
-<link rel="stylesheet" href="../webroot/css/settings.css"/>
-
-<!--Custom CSS-->
-<link rel="stylesheet" href="../webroot/css/style.css"/>
-
 <header id="header-style-1" class="dark_header">
     <div class="container">
         <nav class="navbar yamm navbar-default">
