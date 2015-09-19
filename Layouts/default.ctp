@@ -55,8 +55,13 @@ $theme_config = json_decode($theme_config, true);
     <div class="container">
         <div class="col-lg-5 col-md-6 col-sm-12">
             <div class="copyright-text">
-                <p>Copyright &copy; 2015 - Thème VulkaPVP - Site Web propulsé par <a href="http://mineweb.org">MineWeb</a>.
-                    <br/> Vulkapvp n'est en aucun cas affilié à Mojang.</p>
+                <div class="pull-left">
+                    <p>Copyright &copy; 2015 - Thème VulkaPVP - Site Web propulsé par <a href="http://mineweb.org">MineWeb</a>.</p>
+                </div>
+                <div class="pull-right">
+                    <p>VulkaPvP n'est en aucun cas affilié à Mojang.</p>
+                </div>
+
             </div><!-- end copyright-text -->
         </div><!-- end widget -->
         <div class="col-lg-7 col-md-6 col-sm-12 clearfix">
