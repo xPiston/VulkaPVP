@@ -67,7 +67,7 @@
 							</label>
 							<label class="radio">
 								<input type="radio" name="navbar" value="vulkabar"<?php if($config['navbar'] == "vulkabar") { echo ' checked'; } ?>>
-								<p>VulkaBar (Screenshot bientot)</p>
+								<img src="http://take.ms/lQOD2z" width="450" alt="Vulkabar"/>
 							</label>
 						</div>
 					</div>
