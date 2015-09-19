@@ -27,7 +27,6 @@ $theme_config = json_decode($theme_config, true);
     <link href='http://fonts.googleapis.com/css?family=Rambla' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
 	<?= $this->Html->script('jquery-1.11.0.js') ?>
-   <!-- --><?/*= $this->Html->script('easy_paginate.js') */?>
 
     <link rel="icon" type="image/png" href="<?= $theme_config['favicon_url'] ?>" />
     <!--[if lt IE 9]>
