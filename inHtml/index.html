@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VulkaPVP</title>
+    <link rel="stylesheet" href="../webroot/css/animate.min.css"/>
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="../webroot/css/bootstrap.css"/>
+
+    <!--Owl-Carousel-->
+    <link rel="stylesheet" href="../webroot/css/owl-carousel.css"/>
+
+    <!--RoyalSlider + Skin-->
+    <link rel="stylesheet" href="../webroot/css/royalslider.css"/>
+    <link rel="stylesheet" href="../webroot/css/rs-default-inverted.css"/>
+    <link rel="stylesheet" type="text/css" href="../webroot/rs-plugin/css/settings.css" media="screen" />
+
+    <!--Slider revolution settings-->
+    <link rel="stylesheet" href="../webroot/css/settings.css"/>
+
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="../webroot/css/style.css"/>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+<body>
+<nav id="header-style-1" class="dark_header">
+    <div class="container">
+        <nav class="navbar yamm navbar-default">
+            <div class="navbar-header">
+                <button type="button" data-toggle="collapse" data-target="#navbar-collapse-1" class="navbar-toggle">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="/" class="navbar-brand">VulkaPVP</a>
+            </div>
+
+            <div id="navbar-collapse-1" class="navbar-collapse collapse navbar-right">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown yamm-fw">
+                        <a href="/"><i class="fa fa-home" title="Accueil"></i></a>
+                    </li>
+                    <li class="dropdown yamm-fw actived">
+                        <a href="#" value="dropdown"></a>
+                    </li>
+                    <?php } else { ?>
+                    <li class="dropdown yamm-fw">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Nav2<span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Item</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown yamm-fw">
+                        <div class="btn-group">
+                            <a style="padding-top:6px;" href="#" class="btn btn-primary">Pseudo</a>
+                            <a style="padding-top:6px;" href="#" data-toggle="modal" data-target="#login" class="btn btn-primary"><i class="fa fa-user"></i></a>
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                <span class="caret"></span>
+                                <span class="sr-only">Toggle Dropdown</span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                                <img class="img-rounded" src="#" title="User">
+
+                                    <span class="info pull-right">
+                              Money
+                            </span>
+                                <div class="clearfix"></div>
+
+                                <li class="divider"></li>
+
+                                <a class="btn btn-primary btn-block" href="#"</a>
+                                <a style="color:red;" class="btn btn-primary btn-block" href="#">Panel Admin</a>
+                                <a class="btn btn-primary btn-block" href="#">Add Money</a>
+                                <a class="btn btn-primary btn-block" href="#">Logout</a>
+                                <a class="btn btn-primary btn-block" href="#" data-toggle="modal" data-target="#login">Login</a>
+                                <a class="btn btn-primary btn-block" href="#" data-toggle="modal" data-target="#register">Register</a>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</nav>
+<section class="slider-wrapper">
+
+    <div class="tp-banner-container">
+        <div class="tp-banner" >
+            <ul>
+                <!-- SLIDE  -->
+                <li data-transition="fade" data-slotamount="7" data-masterspeed="1500" >
+                    <!-- MAIN IMAGE -->
+                    <img src="http://placehold.it/1920x500?text=Hello+World"  alt="slidebg1"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+                    <!-- LAYERS -->
+                    <!-- LAYER NR. 1 -->
+                    <div class="tp-caption largepinkbg skewfromrightshort fadeout"
+                         data-x="85"
+                         data-y="224"
+                         data-speed="500"
+                         data-start="1200"
+                         data-easing="Power4.easeOut">Bienvenue sur le site de VulkaPVP
+                    </div>
+                    ...
+
+                </li>
+                <!-- SLIDE  -->
+                <li data-transition="zoomout" data-slotamount="7" data-masterspeed="1000" >
+                    <!-- MAIN IMAGE -->
+                    <img src="http://placehold.it/1920x500?text=Hello+World"  alt="darkblurbg"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+                    <!-- LAYERS -->
+                    <!-- LAYER NR. 1 -->
+                    <div class="tp-caption medium_bg_red skewfromrightshort fadeout"
+                         data-x="85"
+                         data-y="224"
+                         data-speed="500"
+                         data-start="1200"
+                         data-easing="Power4.easeOut">
+                    </div>
+                    ...
+                </li>
+                ....
+            </ul>
+        </div>
+    </div>
+
+</section><!-- end slider-wrapper -->
+<script src="//code.jquery.com/jquery-1.11.0.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<!-- SLIDER REVOLUTION 4.x SCRIPTS  -->
+<script type="text/javascript" src="../webroot/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
+<script type="text/javascript" src="../webroot/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+<script type="text/javascript">
+    var revapi;
+    jQuery(document).ready(function() {
+        revapi = jQuery('.tp-banner').revolution(
+                {
+                    delay:9000,
+                    startwidth:1170,
+                    startheight:500,
+                    hideThumbs:10,
+                    fullWidth:"on",
+                    forceFullWidth:"on"
+                });
+    });	//ready
+</script>
+</body>
+</html>
