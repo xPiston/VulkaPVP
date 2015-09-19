@@ -113,6 +113,7 @@ $theme_config = json_decode($theme_config, true);
                         </div>
                     </div>
                 </li>
+                <pre><?= var_dump($search_news)?></pre>
             <?php } ?>
             </ul>
             <ol id="pagination"></ol>
