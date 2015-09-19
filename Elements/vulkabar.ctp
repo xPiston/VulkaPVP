@@ -54,6 +54,10 @@
                             <?php } else { ?>
                                 <a style="padding-top:6px;" href="#login" href="#" data-toggle="modal" data-target="#login" class="btn btn-primary"><i class="fa fa-user"></i></a>
                             <?php } ?>
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                            <span class="caret"></span>
+                            <span class="sr-only">Toggle Dropdown</span>
+                        </button>
                             <ul class="dropdown-menu" role="menu">
                                 <?php if($this->Connect->connect()) { ?>
 
