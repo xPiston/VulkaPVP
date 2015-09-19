@@ -3643,7 +3643,7 @@
 	#header-style-1 .navbar-default .navbar-nav > .open > a:hover,
 	#header-style-1 .navbar-default .navbar-nav > .open > a:focus,
 	#topbar .social-icons span a:hover {
-		background-color:#f7c221;
+		background-color:rgb(255, 174, 0);
 	}
 	.flex-direction-nav a,
 	.rsUni .rsThumb.rsNavSelected .thumbIco,
