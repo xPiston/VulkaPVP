@@ -2,7 +2,7 @@
     $this->Configuration = new ConfigurationComponent;
     $this->EyPlugin = new EyPluginComponent;
 ?>
-<header id="header-style-1" class="dark_header">
+<header id="header-style-1" class="dark_header affix-top">
     <div class="container">
         <nav class="navbar yamm navbar-default">
             <div class="navbar-header">
