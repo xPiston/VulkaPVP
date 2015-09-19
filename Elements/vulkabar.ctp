@@ -66,7 +66,7 @@
                         }
                     } ?>
                     <li class="dropdown yamm-fw">
-                        <div class="btn-group">
+
                             <?php if($this->Connect->connect()) { ?>
                                 <a style="padding-top:6px;" href="<?= $this->Html->url(array('controller' => 'profile', 'action' => 'index', 'plugin' => null)) ?>" class="btn btn-primary"><?= $this->Connect->get_pseudo() ?></a>
                             <?php } else { ?>
@@ -108,7 +108,6 @@
                                     <a class="btn btn-primary btn-block" href="#" data-toggle="modal" data-target="#register"><?= $Lang->get('REGISTER') ?></a>
                                 <?php } ?>
                             </ul>
-                        </div>
                     </li>
                 </ul>
             </div>
