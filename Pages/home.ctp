@@ -99,19 +99,7 @@ $theme_config = json_decode($theme_config, true);
         
         
     </div>
-        <div class="brand-social hidden-sm hidden-xs">
-            <div class="row">
-                <div class="container">
-                    <center>
-                        <a class="btn-skype" target="_blank" href="<?= $this->Configuration->get('skype') ?>"><img src="theme/mineweb/img/skype.png"></a>
-                        <a class="btn-youtube" target="_blank" href="<?= $this->Configuration->get('youtube') ?>"><img src="theme/mineweb/img/yt.png"></a>
-                        <span><?= $Lang->get('JOIN_US') ?></span>
-                        <a class="btn-twitter" target="_blank" href="<?= $this->Configuration->get('twitter') ?>"><img src="theme/mineweb/img/twitter.png"></a>
-                        <a class="btn-facebook" target="_blank" href="<?= $this->Configuration->get('facebook') ?>"><img src="theme/mineweb/img/fb.png"></a>
-                    </center>
-                </div>
-            </div>
-        </div>
+
 
         <?= $Module->loadModules('home') ?>
 <!-- SLIDER REVOLUTION 4.x SCRIPTS  -->
