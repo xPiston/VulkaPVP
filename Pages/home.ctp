@@ -70,30 +70,6 @@ $theme_config = json_decode($theme_config, true);
             ?></h2>
     </div>
 </section>
-    <div class="mini-navbar mini-navbar-dark hidden-xs">
-      <div class="container">
-        <div class="col-sm-12">
-          <?php 
-          $banner_server = $this->Configuration->get('banner_server');
-          if(empty($banner_server)) {
-            if($Server->online()) {
-              echo '<p class="text-center"><?= $Lang->banner_server($Server->banner_infos()) ?></p>';
-            } else { 
-              echo '<p class="text-center">'.$Lang->get('SERVER_OFF').'</p>';
-            }
-          } else {
-            $banner_server = unserialize($banner_server);
-            $server_infos = $Server->banner_infos($banner_server);
-            if(!empty($server_infos['getPlayerMax'])) {
-              echo '<p class="text-center">'.$Lang->banner_server($server_infos).'</p>';
-            } else {
-              echo '<p class="text-center">'.$Lang->get('SERVER_OFF').'</p>';
-            }
-          } 
-          ?>
-        </div>
-      </div>
-    </div>
 
     <div class="container bg">
         <div id="debug"></div>
