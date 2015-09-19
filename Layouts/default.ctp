@@ -51,11 +51,6 @@ $theme_config = json_decode($theme_config, true);
             <?= $this->fetch('content'); ?>
         <!-- Footer -->
     </div>
-        <footer>
-            <div class="container">
-                <p><?= $Lang->get('COPYRIGHT') ?></p>
-            </div>
-        </footer>
 <div id="copyrights">
     <div class="container">
         <div class="col-lg-5 col-md-6 col-sm-12">
