@@ -56,7 +56,23 @@ $theme_config = json_decode($theme_config, true);
                 <p><?= $Lang->get('COPYRIGHT') ?></p>
             </div>
         </footer>
-    
+<div id="copyrights">
+    <div class="container">
+        <div class="col-lg-5 col-md-6 col-sm-12">
+            <div class="copyright-text">
+                <p>Copyright &copy; 2015 - Thème VulkaPVP - Site Web propulsé par <a href="http://mineweb.org">MineWeb</a>.
+                    <br/> Vulkapvp n'est en aucun cas affilié à Mojang.</p>
+            </div><!-- end copyright-text -->
+        </div><!-- end widget -->
+        <div class="col-lg-7 col-md-6 col-sm-12 clearfix">
+            <div class="footer-menu">
+                <ul class="menu">
+                    <!--ICI UN MENU-->
+                </ul>
+            </div>
+        </div><!-- end large-7 -->
+    </div><!-- end container -->
+</div><!-- end copyrights -->
     <?= $this->element('login_register') ?>
     <?= $this->element('script') ?>
 
