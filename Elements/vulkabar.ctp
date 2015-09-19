@@ -52,7 +52,7 @@
                             <?php if($this->Connect->connect()) { ?>
                                 <a style="padding-top:6px;" href="<?= $this->Html->url(array('controller' => 'profile', 'action' => 'index', 'plugin' => null)) ?>" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><?= $this->Connect->get_pseudo() ?> <span class="caret"></span></a>
                             <?php } else { ?>
-                                <a style="padding-top:6px;" href="#login" data-toggle="modal" data-target="#login" class="btn btn-primary"><i class="fa fa-user"></i></a>
+                                <a style="padding-top:6px;" href="#login" data-toggle="modal dropdown" data-target="#login" class="dropdown-toggle"><i class="fa fa-user"></i><span class="caret"></span></a>
                             <?php } ?>
                             <ul class="dropdown-menu" role="menu">
                                 <?php if($this->Connect->connect()) { ?>
