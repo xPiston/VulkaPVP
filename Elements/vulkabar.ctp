@@ -90,11 +90,11 @@
                         $count2 = $count / 2;
                         foreach ($nav as $key => $value) { ?>
                             <?php if(empty($value['Navbar']['submenu'])) { ?>
-                                <li class="dropdown yamm-fw<?php if($i < $count2) { echo ' pull-left'; } elseif($i >= $count2) { echo ' pull-right'; } ?><?php if($this->params['controller'] == $value['Navbar']['name']) { ?> actived<?php } ?>">
+                                <li <!--class="--><?php /*if($i < $count2) { echo ' pull-left'; } elseif($i >= $count2) { echo ' pull-right'; } */?><?php if($this->params['controller'] == $value['Navbar']['name']) { ?> actived<?php } ?>">
                                     <a href="<?= $value['Navbar']['url'] ?>"><?= $value['Navbar']['name'] ?></a>
                                 </li>
                             <?php } else { ?>
-                                <li class="dropdown yamm-fw<?php if($i < $count2) { echo ' pull-left'; } elseif($i >= $count2) { echo ' pull-right'; } ?>">
+                                <li <!--class="dropdown--><?php /*if($i < $count2) { echo ' pull-left'; } elseif($i >= $count2) { echo ' pull-right'; } */?>">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><?= $value['Navbar']['name'] ?> <span class="caret"></span></a>
                                     <ul class="dropdown-menu" role="menu">
                                         <?php
