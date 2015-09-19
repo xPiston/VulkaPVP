@@ -11,7 +11,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="/" class="navbar-brand">VulkaPVP</a>
+                <a href="/" class="navbar-brand"><img src="../img/logo.png" alt="Logo"/></a>
             </div>
 
             <div id="navbar-collapse-1" class="navbar-collapse collapse navbar-right">
