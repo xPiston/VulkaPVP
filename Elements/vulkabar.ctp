@@ -32,7 +32,7 @@
                                     <a href="<?= $value['Navbar']['url'] ?>"><?= $value['Navbar']['name'] ?></a>
                                 </li>
                             <?php } else { ?>
-                                <li <!--class="dropdown--><?php /*if($i < $count2) { echo ' pull-left'; } elseif($i >= $count2) { echo ' pull-right'; } */?>">
+                                <li class="dropdown <?php /*if($i < $count2) { echo ' pull-left'; } elseif($i >= $count2) { echo ' pull-right'; } */?>">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><?= $value['Navbar']['name'] ?> <span class="caret"></span></a>
                                     <ul class="dropdown-menu" role="menu">
                                         <?php
@@ -50,14 +50,10 @@
                     } ?>
                     <li class="dropdown">
                             <?php if($this->Connect->connect()) { ?>
-                                <a style="padding-top:6px;" href="<?= $this->Html->url(array('controller' => 'profile', 'action' => 'index', 'plugin' => null)) ?>" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><?= $this->Connect->get_pseudo() ?></a>
+                                <a style="padding-top:6px;" href="<?= $this->Html->url(array('controller' => 'profile', 'action' => 'index', 'plugin' => null)) ?>" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><?= $this->Connect->get_pseudo() ?> <span class="caret"></span></a>
                             <?php } else { ?>
-                                <a style="padding-top:6px;" href="#login" href="#" data-toggle="modal" data-target="#login" class="btn btn-primary"><i class="fa fa-user"></i></a>
+                                <a style="padding-top:6px;" href="#login" data-toggle="modal" data-target="#login" class="btn btn-primary"><i class="fa fa-user"></i></a>
                             <?php } ?>
-                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                            <span class="caret"></span>
-                            <span class="sr-only">Toggle Dropdown</span>
-                        </button>
                             <ul class="dropdown-menu" role="menu">
                                 <?php if($this->Connect->connect()) { ?>
 
@@ -76,18 +72,18 @@
 
                                     <li class="divider"></li>
 
-                                    <a class="btn btn-primary btn-block" href="<?= $this->Html->url(array('controller' => 'profile', 'action' => 'index', 'plugin' => null)) ?>"><?= $Lang->get('PROFILE') ?></a>
+                                    <li><a href="<?= $this->Html->url(array('controller' => 'profile', 'action' => 'index', 'plugin' => null)) ?>"><?= $Lang->get('PROFILE') ?></a></li>
 
                                     <?php if($this->Connect->if_admin()) { ?>
-                                        <a style="color:red;" class="btn btn-primary btn-block" href="<?= $this->Html->url(array('controller' => '', 'action' => 'index', 'plugin' => 'admin')) ?>"><?= $Lang->get('ADMIN_PANEL') ?></a>
+                                        <li><a style="color:red;"  href="<?= $this->Html->url(array('controller' => '', 'action' => 'index', 'plugin' => 'admin')) ?>"><?= $Lang->get('ADMIN_PANEL') ?></a></li>
                                     <?php } elseif($this->EyPlugin->is_installed('Shop')) { ?>
-                                        <a class="btn btn-primary btn-block" href="<?= $this->Html->url(array('controller' => 'shop', 'action' => 'index', 'plugin' => 'shop')) ?>"><?= $Lang->get('ADD_MONEY') ?></a>
+                                        <li><a href="<?= $this->Html->url(array('controller' => 'shop', 'action' => 'index', 'plugin' => 'shop')) ?>"><?= $Lang->get('ADD_MONEY') ?></a></li>
                                     <?php } ?>
 
-                                    <a class="btn btn-primary btn-block" href="<?= $this->Html->url(array('controller' => 'user', 'action' => 'logout', 'plugin' => null)) ?>"><?= $Lang->get('LOGOUT') ?></a>
+                                    <li><a href="<?= $this->Html->url(array('controller' => 'user', 'action' => 'logout', 'plugin' => null)) ?>"><?= $Lang->get('LOGOUT') ?></a></li>
                                 <?php } else { ?>
-                                    <a class="btn btn-primary btn-block" href="#" data-toggle="modal" data-target="#login"><?= $Lang->get('LOGIN') ?></a>
-                                    <a class="btn btn-primary btn-block" href="#" data-toggle="modal" data-target="#register"><?= $Lang->get('REGISTER') ?></a>
+                                    <li><a href="#" data-toggle="modal" data-target="#login"><?= $Lang->get('LOGIN') ?></a></li>
+                                   <li><a href="#" data-toggle="modal" data-target="#register"><?= $Lang->get('REGISTER') ?></a></li>
                                 <?php } ?>
                             </ul>
                     </li>
