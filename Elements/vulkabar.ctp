@@ -11,7 +11,9 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="/" class="navbar-brand"><img src="../theme/Vulkapvp/img/logo.png" alt="Logo"/></a>
+                <a href="/" class="navbar-brand"><img src="../theme/Vulkapvp/img/logo.png" alt="Logo" style="
+    width: 25%;
+"></a>
             </div>
 
             <div id="navbar-collapse-1" class="navbar-collapse collapse navbar-right">
