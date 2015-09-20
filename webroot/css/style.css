@@ -96,6 +96,7 @@
 	}
 	a.navbar-brand {
 		background: url(../img/logo.png) no-repeat scroll left top rgba(0, 0, 0, 0);
+		background-size: cover;
 		color: #222222 !important;
 		font-size: 35px;
 		font-weight: 400;
