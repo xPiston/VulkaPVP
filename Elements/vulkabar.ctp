@@ -11,9 +11,10 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="/" class="navbar-brand"><img src="/theme/Vulkapvp/img/logo.png" alt="Logo" style="
-    width: 25%;
-"></a>
+                <a href="/" class="navbar-brand" style="
+    width: 120px;
+    padding-left: 0px !important;
+    padding-right: 0px !important; height: 40px;" <!-- Technique du bled mdrrr -->></a>
             </div>
 
             <div id="navbar-collapse-1" class="navbar-collapse collapse navbar-right">
