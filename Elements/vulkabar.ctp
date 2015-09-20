@@ -14,7 +14,7 @@
                 <a href="/" class="navbar-brand" style="
     width: 120px;
     padding-left: 0px !important;
-    padding-right: 0px !important; height: 40px;" <!-- Technique du bled mdrrr -->></a>
+    padding-right: 0px !important; height: 40px;"><!-- Technique du bled mdrrr --></a>
             </div>
 
             <div id="navbar-collapse-1" class="navbar-collapse collapse navbar-right">
