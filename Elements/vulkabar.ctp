@@ -28,7 +28,7 @@
                         $count2 = $count / 2;
                         foreach ($nav as $key => $value) { ?>
                             <?php if(empty($value['Navbar']['submenu'])) { ?>
-                                <li <!--class="--><?php /*if($i < $count2) { echo ' pull-left'; } elseif($i >= $count2) { echo ' pull-right'; } */?><?php if($this->params['controller'] == $value['Navbar']['name']) { ?> actived<?php } ?>">
+                                <li <?php /*if($i < $count2) { echo ' pull-left'; } elseif($i >= $count2) { echo ' pull-right'; } */?><?php if($this->params['controller'] == $value['Navbar']['name']) { ?> actived<?php } ?>">
                                     <a href="<?= $value['Navbar']['url'] ?>"><?= $value['Navbar']['name'] ?></a>
                                 </li>
                             <?php } else { ?>
@@ -50,7 +50,7 @@
                     } ?>
                     <li class="dropdown">
                             <?php if($this->Connect->connect()) { ?>
-                                <a style="padding-top:6px;" href="<?= $this->Html->url(array('controller' => 'profile', 'action' => 'index', 'plugin' => null)) ?>" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><?= $this->Connect->get_pseudo() ?> <span class="caret"></span></a>
+                                <a style="padding-top:6px;" href="<?= $this->Html->url(array('controller' => 'profile', 'action' => 'index', 'plugin' => null)) ?>" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <?= $this->Connect->get_pseudo() ?> <span class="caret"></span></a>
                             <?php } else { ?>
                                 <a style="padding-top:6px;" href="#login" data-toggle="modal dropdown" data-target="#login" class="dropdown-toggle"><i class="fa fa-user"></i><span class="caret"></span></a>
                             <?php } ?>
