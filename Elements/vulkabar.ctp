@@ -50,7 +50,7 @@
                     } ?>
                     <li class="dropdown">
                             <?php if($this->Connect->connect()) { ?>
-                                <a style="padding-top:6px;" href="<?= $this->Html->url(array('controller' => 'profile', 'action' => 'index', 'plugin' => null)) ?>" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <?= $this->Connect->get_pseudo() ?> <span class="caret"></span></a>
+                                <a href="<?= $this->Html->url(array('controller' => 'profile', 'action' => 'index', 'plugin' => null)) ?>" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <?= $this->Connect->get_pseudo() ?> <span class="caret"></span></a>
                             <?php } else { ?>
                                 <a href="#login" data-toggle="modal dropdown" data-target="#login" class="dropdown-toggle"><i class="fa fa-user"></i><span class="caret"></span></a>
                             <?php } ?>
